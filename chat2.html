@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>    
+    <link rel="stylesheet" href="stylesheet.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+            <script type="text/javascript" src="https://cdn.firebase.com/v0/firebase.js"></script>
+    <script type="text/javascript" src='https://cdn.firebase.com/js/simple-login/1.3.2/firebase-simple-login.js'> </script>
+
+
+</head>
+
+<body>    
+
+    <h1>Welcome!</h1>
+
+    <div id="loginbox">
+    <img src="http://escribelo.com.ar/images/fbl.png" alt="" id="fbl">
+    <br>
+    <a id="fblo" href="">Log Out</a>
+    </div>
+    
+    
+    
+    <div id="chatbox">
+
+    <!--(div[id="container"]>(div>img[id="user-image" src="http://lorempixel.com/50/50/"])+(div[id="user-message"]>p[id="user-name"]{User_$}+p[id="user-comment"]{ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porta massa id                   pretium tincidunt. Nunc scelerisque enim non condimentum tristique.}))*5-->
+    <div id="container">
+        <div><img src="http://lorempixel.com/50/50/" alt="" id="user-image"></div>
+        <div id="user-message">
+            <a href="/#" id="user-name">User_1</a>
+            <p id="user-comment"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porta massa id                   pretium tincidunt. Nunc scelerisque enim non condimentum tristique.</p>
+        </div>
+    </div>
+    <div id="container">
+        <div><img src="http://lorempixel.com/50/50/" alt="" id="user-image"></div>
+        <div id="user-message">
+            <a href="/#" id="user-name">User_5</a>
+            <p id="user-comment"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porta massa id                   pretium tincidunt. Nunc scelerisque enim non condimentum tristique.</p>
+        </div>
+    </div>
+    </div>
+    <br> 
+    <div>
+        <label for="message">Usuario</label>
+        <input type="text" id="message-input" placeholder="Logeate para usar el chat" disabled="true">
+    </div>
+ <script src="script-chat.js"></script>
+
+</body>
+</html>
