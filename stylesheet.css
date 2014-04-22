@@ -4,10 +4,11 @@ body {
 }
 
 #chatbox{
- height: 200px;
+ height: 300px;
  width: 100%;
  overflow-y: auto;
  overflow-x: hidden;
+ border: 2px blue solid;
  background-color: white;    
 }
 
