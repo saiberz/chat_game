@@ -28,8 +28,11 @@
 
     function addmessage(m, un, user_id, hour) {
         var newdivbox = document.createElement("div");
-        var newdiv1 = document.createElement("div");    
+        var newdiv1 = document.createElement("figure");    
         var newdiv2 = document.createElement("div");
+        var contenedor = document.createElement("div");
+        contenedor.setAttribute("id", "todo");
+
         var timeago = moment(hour).fromNow();
         newdivbox.setAttribute("id", "container");
         var newimg = document.createElement("img");
@@ -52,7 +55,8 @@
         newdiv2.appendChild(text);        
         newdivbox.appendChild(newdiv1);
         newdivbox.appendChild(newdiv2);
-        $("#chatbox").prepend(newdivbox);
+        contenedor.appendChild(newdivbox);
+        $("#chatbox").prepend(contenedor);
     } 
     
     // event handlers

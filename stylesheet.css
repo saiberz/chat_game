@@ -1,0 +1,79 @@
+body
+{
+
+    color: white;
+    background: #181407;
+
+}
+figure
+{
+
+    margin: 5px 10px;
+
+}
+
+input{
+    border: 1px solid black;
+    height: 2.5em;
+    border-radius: 5px;
+    width: 1000px;
+    
+}
+p
+{
+
+    width: 800px;
+    white-space: normal;
+
+}
+
+#todo
+{
+    border-top: solid 1px #6E6E6E;
+    
+}
+.row
+{
+    margin: 70px auto;
+    display: block;
+    
+}
+#insert{
+    margin: 50px;
+    padding: 20px;
+    
+}
+#chatbox
+{
+
+    
+    padding: 30px;
+    border-style: solid ;
+    background: #2E2E2E;
+    border-radius: 30px;
+    display: inline-block;
+    width: 1000px;
+}
+
+#container
+{
+    
+    display: inline-flex;
+    margin: 5px 0 0 0;
+    width: 900px;
+
+   
+}
+#user-image
+{
+
+    border-radius: 30px;
+
+}
+
+#user-message
+{
+
+    margin: 10px 0  0 5px;
+
+}
