@@ -77,3 +77,10 @@ p
     margin: 10px 0  0 5px;
 
 }
+#user-comment-time
+{
+    position: relative;
+    text-align: right;
+    color: #BDBDBD;
+
+}

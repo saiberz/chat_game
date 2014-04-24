@@ -45,7 +45,7 @@
         text.setAttribute("id", "user-comment");        
         var text2 = document.createElement("span");
         text2.appendChild(document.createTextNode(" ("+timeago+")"));
-        text2.setAttribute("id", "user-comment");
+        text2.setAttribute("id", "user-comment-time");
         var userlink = document.createElement("a");
         userlink.setAttribute("href", "http://fb.com/" + user_id);
         userlink.setAttribute("id", "user-name");
