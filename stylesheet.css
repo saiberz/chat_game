@@ -64,6 +64,25 @@ p
 
    
 }
+
+#message-input
+{
+
+    background: #515458;
+    border: 1px solid rgba(255,255,255,0.3);
+    font-size: 15px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    padding: 3px;
+    padding-bottom: 30px;
+    outline: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+
+}
+
 #user-image
 {
 
