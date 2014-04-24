@@ -16,8 +16,11 @@
             user_name = user.displayName;
             fb_id = user.id;
             $("#fbl").hide(1000);
+            $("#fblo").show(1000);
         } else {
             user_name = "Anonymous!";
+            $("#fbl").show(1000);
+            $("#fblo").hide(1000);
         }
     });
     
@@ -65,8 +68,6 @@
         if(confirm("Are you sure")) {
             auth.logout();
             $("input").prop("disabled", true);
-            $("#fbl").show(1000);
-
         }
     });
 
