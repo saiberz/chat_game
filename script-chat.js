@@ -65,6 +65,8 @@
         if(confirm("Are you sure")) {
             auth.logout();
             $("input").prop("disabled", true);
+            $("#fbl").show(1000);
+
         }
     });
 
