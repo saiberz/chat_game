@@ -3,7 +3,7 @@ body
 
     color: white;
     background: #181407;
-
+    
 }
 figure
 {
@@ -82,5 +82,12 @@ p
     position: relative;
     text-align: right;
     color: #BDBDBD;
+
+}
+
+.insert
+{
+
+    color: black;
 
 }
