@@ -60,6 +60,7 @@
     $("#fblo").click(function() {
         if(confirm("Are you sure")) {
             auth.logout();
+            $("input").prop("disabled", true);
         }
     });
 
