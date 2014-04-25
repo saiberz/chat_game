@@ -30,7 +30,7 @@
         ss = ss.val();
         addmessage(ss.text, ss.name, ss.id, ss.hour);
         if(ss.text[0] === "#" && flag)
-                    notificar(ss.text);
+                    notificar(ss.text,ss.id,ss.name);
     });
 
     function addmessage(m, un, user_id, hour) {
@@ -66,7 +66,8 @@
         $("#chatbox").prepend(contenedor);
     }
 
-    function notificar(m) {
+    function notificar(m,id,un) {
+        var image_src = "http://graph.facebook.com/" + id + "/picture"
         if (Notification && Notification.permission !== "granted") {
             Notification.requestPermission(function (status) {
                 if (Notification.permission !== status) {
@@ -76,10 +77,10 @@
         }
         // If the user agreed to get notified
         if (Notification && Notification.permission === "granted") {
-            var notification = new Notification(m);
+            var notification = new Notification(un, { icon : image_src, body : m });
             setTimeout(function(){
                 notification.close();
-            },5000);
+            },3000);
         }
     };
     
