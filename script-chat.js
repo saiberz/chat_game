@@ -27,7 +27,7 @@
     Fire.on("child_added", function(ss) {
         ss = ss.val();
         addmessage(ss.text, ss.name, ss.id, ss.hour);
-        if(ss.text === "#")
+        if(ss.text[0] === "#")
                     notificar(ss.text);
     });
 
