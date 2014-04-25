@@ -94,7 +94,7 @@
     });
 
     $("#message-input").keypress(function (event) {
-        var flag = true;
+        flag = true;
         var ENTER_KEY = 13;
         if (event.keyCode === ENTER_KEY) {      
             if($("#message-input").val() !== "") {
