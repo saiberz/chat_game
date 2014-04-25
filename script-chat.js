@@ -5,6 +5,7 @@
     var user_name = null;
     var fb_id = null;
     var hora = null;
+    var flag = false;
     // conección a Firebase
     var lastMessages = null;
     var Fire = new Firebase("https://saiberz.firebaseio.com/chat");
@@ -24,11 +25,11 @@
             $("#fblo").hide(1000);
         }
     });
-    lastMessages = Fire.endAt().limit(25);
+    lastMessages = Fire.endAt().limit(50);
     lastMessages.on("child_added", function(ss) {
         ss = ss.val();
         addmessage(ss.text, ss.name, ss.id, ss.hour);
-        if(ss.text[0] === "#")
+        if(ss.text[0] === "#" && flag)
                     notificar(ss.text);
     });
 
@@ -93,6 +94,7 @@
     });
 
     $("#message-input").keypress(function (event) {
+        var flag = true;
         var ENTER_KEY = 13;
         if (event.keyCode === ENTER_KEY) {      
             if($("#message-input").val() !== "") {
