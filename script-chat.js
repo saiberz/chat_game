@@ -76,7 +76,10 @@
         }
         // If the user agreed to get notified
         if (Notification && Notification.permission === "granted") {
-            var n = new Notification(m);
+            var notification = new Notification(m);
+            setTimeout(function(){
+                notification.close();
+            },5000);
         }
     };
     
