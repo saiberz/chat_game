@@ -1,69 +1,60 @@
 body
 {
-
     color: white;
     background: #181407;
-    
 }
 figure
 {
-
     margin: 5px 10px;
-
 }
 
-input{
+input
+{
     border: 1px solid black;
     height: 2.5em;
     border-radius: 5px;
     width: 1000px;
     
 }
+
 p
 {
-
     width: 800px;
     white-space: normal;
-
 }
 
 #todo
 {
-    border-top: solid 1px #6E6E6E;
+    border-bottom: solid 1px #6E6E6E;
     
 }
+
 .row
 {
     margin: 70px auto;
     display: block;
     
 }
-#insert{
-    margin: 50px;
-    padding: 20px;
-    
-}
-#chatbox
-{
 
-    
-    padding: 30px;
+#insert
+{
+    margin: 40px 125px 0  125px;
+}
+
+#chatbox
+{    
     border-style: solid ;
     background: #2E2E2E;
     border-radius: 30px;
-    display: inline-block;
-    margin: 50px;
+    margin: 20px auto;
     width: 80%;
 }
 
 #container
-{
-    
+{   
     display: inline-flex;
     margin: 5px 0 0 0;
-    width: 900px;
-
-   
+    width: 900px;  
 }
 
 #message-input
@@ -88,7 +79,6 @@ p
 {
     border: 3px dashed #BDBDBD;
     border-radius: 35px;
-
 }
 
 #user-message
@@ -97,6 +87,7 @@ p
     margin: 10px 0  0 5px;
     white-space: normal;
 }
+
 #user-comment-time
 {
     position: relative;
