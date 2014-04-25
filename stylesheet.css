@@ -52,7 +52,8 @@ p
     background: #2E2E2E;
     border-radius: 30px;
     display: inline-block;
-    width: 100%;
+    margin: 50px;
+    width: 80%;
 }
 
 #container
@@ -106,7 +107,6 @@ p
 
 .insert
 {
-
     color: white;
     padding: 0 0 10px 0;
 }
