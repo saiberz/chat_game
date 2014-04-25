@@ -6,6 +6,7 @@
     var fb_id = null;
     var hora = null;
     // conección a Firebase
+    var lastMessages = null;
     var Fire = new Firebase("https://saiberz.firebaseio.com/chat");
     var auth = new FirebaseSimpleLogin(Fire, function(error, user) {
         if (error) {
@@ -23,8 +24,8 @@
             $("#fblo").hide(1000);
         }
     });
-    
-    Fire.on("child_added", function(ss) {
+    lastMessages = Fire.endAt().limit(25);
+    lastMessages.on("child_added", function(ss) {
         ss = ss.val();
         addmessage(ss.text, ss.name, ss.id, ss.hour);
         if(ss.text[0] === "#")
