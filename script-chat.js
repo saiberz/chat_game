@@ -77,7 +77,7 @@
         }
         // If the user agreed to get notified
         if (Notification && Notification.permission === "granted") {
-            var notification = new Notification(un, { icon : image_src, body : m });
+            var notification = new Notification(un, { icon : image_src, body : m.slice(1) });
             setTimeout(function(){
                 notification.close();
             },3000);
