@@ -27,6 +27,8 @@
     Fire.on("child_added", function(ss) {
         ss = ss.val();
         addmessage(ss.text, ss.name, ss.id, ss.hour);
+        if(ss.text === "#")
+                    notificar(ss.text);
     });
 
     function addmessage(m, un, user_id, hour) {
@@ -60,7 +62,21 @@
         newdivbox.appendChild(newdiv2);
         contenedor.appendChild(newdivbox);
         $("#chatbox").prepend(contenedor);
-    } 
+    }
+
+    function notificar(m) {
+        if (Notification && Notification.permission !== "granted") {
+            Notification.requestPermission(function (status) {
+                if (Notification.permission !== status) {
+                    Notification.permission = status;
+                }
+            });
+        }
+        // If the user agreed to get notified
+        if (Notification && Notification.permission === "granted") {
+            var n = new Notification(m);
+        }
+    };
     
     // event handlers
 
