@@ -109,7 +109,7 @@
         if (event.keyCode === ENTER_KEY) {      
             if($("#message-input").val() !== "") {
                 var text = $("#message-input").val();
-                var hour = moment().format();
+                var hour = moment().valueOf();
                 Fire.push({name: user_name, text: text, id: fb_id,hour: hour});
                 $("#message-input").val("");
             }
