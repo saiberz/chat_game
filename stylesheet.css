@@ -7,7 +7,7 @@ body
 figure
 {
     margin: 5px 10px;
-    width: 56px;
+    width: 57px;
     height: 56px;
     position: absolute;
 }
@@ -15,7 +15,7 @@ figure
 input
 {
     border: 1px solid black;
-    height: 2.5em;
+    /*height: 2.5em;*/
     border-radius: 5px;
     width: 1000px;
 }
