@@ -39,7 +39,10 @@
         var newdiv2 = document.createElement("div");
         var contenedor = document.createElement("div");
         contenedor.setAttribute("id", "todo");
-
+        // para los emoticones
+        var emotic = document.createElement("div");
+        emotic.setAttribute("class","comment")
+       
         var timeago = moment(hour).fromNow();
         newdivbox.setAttribute("id", "container");
         var newimg = document.createElement("img");
@@ -58,8 +61,12 @@
         userlink.setAttribute("id", "user-name");
         userlink.appendChild(document.createTextNode(un));    
         newdiv2.appendChild(userlink);
+        
+        emotic.appendChild(text)
+
         newdiv2.appendChild(text2);
-        newdiv2.appendChild(text);        
+        newdiv2.appendChild(emotic);
+
         newdivbox.appendChild(newdiv1);
         newdivbox.appendChild(newdiv2);
         contenedor.appendChild(newdivbox);
