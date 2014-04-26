@@ -3,9 +3,13 @@ body
     color: white;
     background: #181407;
 }
+
 figure
 {
     margin: 5px 10px;
+    width: 56px;
+    height: 56px;
+    position: absolute;
 }
 
 input
@@ -14,26 +18,27 @@ input
     height: 2.5em;
     border-radius: 5px;
     width: 1000px;
-    
 }
 
 p
 {
-    width: 800px;
     white-space: normal;
+}
+
+img{
+    height: 56px;
+    width: 56px;
 }
 
 #todo
 {
     border-bottom: solid 1px #6E6E6E;
-    
 }
 
 .row
 {
     margin: 70px auto;
     display: block;
-    
 }
 
 #insert
@@ -54,12 +59,11 @@ p
 {   
     display: inline-flex;
     margin: 5px 0 0 0;
-    width: 900px;  
+    width: 100%;
 }
 
 #message-input
 {
-
     background: #515458;
     border: 10px solid rgba(255,255,255,0.3);
     font-size: 15px;
@@ -72,7 +76,6 @@ p
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 100%;
-
 }
 
 #user-image
@@ -83,8 +86,7 @@ p
 
 #user-message
 {
-
-    margin: 10px 0  0 5px;
+    margin: 10px 0  0 76px;
     white-space: normal;
 }
 
@@ -93,7 +95,6 @@ p
     position: relative;
     text-align: right;
     color: #BDBDBD;
-
 }
 
 .insert
