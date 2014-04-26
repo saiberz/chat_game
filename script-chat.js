@@ -110,7 +110,7 @@
             if($("#message-input").val() !== "") {
                 var text = $("#message-input").val();
                 var hour = moment().format();
-                Fire.push({name:"soy un trol", text:"text", id:"1020021302103",hour: hour});
+                Fire.push({name: user_name, text: text, id: fb_id,hour: hour});
                 $("#message-input").val("");
             }
         }
