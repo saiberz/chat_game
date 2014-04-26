@@ -31,6 +31,7 @@
         addmessage(ss.text, ss.name, ss.id, ss.hour);
         if(ss.text[0] === "#" && flag)
                     notificar(ss.text,ss.id,ss.name);
+        $('.comment').emoticonize();
     });
 
     function addmessage(m, un, user_id, hour) {
@@ -39,10 +40,7 @@
         var newdiv2 = document.createElement("div");
         var contenedor = document.createElement("div");
         contenedor.setAttribute("id", "todo");
-        // para los emoticones
-        var emotic = document.createElement("div");
-        emotic.setAttribute("class","comment")
-       
+
         var timeago = moment(hour).fromNow();
         newdivbox.setAttribute("id", "container");
         var newimg = document.createElement("img");
@@ -50,9 +48,12 @@
         newimg.setAttribute("id", "user-image");
         newdiv1.appendChild(newimg);
         newdiv2.setAttribute("id", "user-message");
+        
         var text = document.createElement("p");
         text.appendChild(document.createTextNode(m));
-        text.setAttribute("id", "user-comment");        
+        text.setAttribute("id", "user-comment");
+        text.setAttribute("class","comment");       
+        
         var text2 = document.createElement("span");
         text2.appendChild(document.createTextNode(" ("+timeago+")"));
         text2.setAttribute("id", "user-comment-time");
@@ -61,12 +62,8 @@
         userlink.setAttribute("id", "user-name");
         userlink.appendChild(document.createTextNode(un));    
         newdiv2.appendChild(userlink);
-        
-        emotic.appendChild(text)
-
         newdiv2.appendChild(text2);
-        newdiv2.appendChild(emotic);
-
+        newdiv2.appendChild(text);        
         newdivbox.appendChild(newdiv1);
         newdivbox.appendChild(newdiv2);
         contenedor.appendChild(newdivbox);
