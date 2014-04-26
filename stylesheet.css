@@ -23,6 +23,7 @@ input
 p
 {
     white-space: normal;
+    overflow: auto;
 }
 
 img{

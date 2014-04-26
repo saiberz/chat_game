@@ -1,4 +1,4 @@
-chat_game
+CHAT GAME
 =========
 
-chat?
+http://chatspace.uni.me/
