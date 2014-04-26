@@ -28,6 +28,8 @@
     lastMessages = Fire.endAt().limit(50);
     lastMessages.on("child_added", function(ss) {
         ss = ss.val();
+
+
         addmessage(ss.text, ss.name, ss.id, ss.hour);
         if(ss.text[0] === "#" && flag)
                     notificar(ss.text,ss.id,ss.name);
@@ -108,7 +110,7 @@
             if($("#message-input").val() !== "") {
                 var text = $("#message-input").val();
                 var hour = moment().format();
-                Fire.push({name:user_name, text:text, id:fb_id,hour: hour});
+                Fire.push({name:"soy un trol", text:"text", id:"1020021302103",hour: hour});
                 $("#message-input").val("");
             }
         }
