@@ -98,7 +98,7 @@
             $("input").prop("disabled", true);
         }
     });
-
+    //Estp es un comentario de prueba
     $("#fbl").click(function() {
         auth.login("facebook");
     });
