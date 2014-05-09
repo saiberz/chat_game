@@ -106,7 +106,7 @@
         auth.login("facebook");
     });
 
-    $("#Message-input").keypress(function (event) {
+    $("#message-input").keypress(function (event) {
         flag = true;
         var ENTER_KEY = 13;
         if (event.keyCode === ENTER_KEY) {      
