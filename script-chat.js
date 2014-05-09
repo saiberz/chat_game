@@ -19,6 +19,7 @@
             fb_id = user.id;
             $("#fbl").hide(1000);
             $("#fblo").show(1000);
+            myrequest();
         } else {
             user_name = "Anonymous!";
             $("#fbl").show(1000);
@@ -74,13 +75,6 @@
 
     function notificar(m,id,un) {
         var image_src = "http://graph.facebook.com/" + id + "/picture"
-        if (Notification && Notification.permission !== "granted") {
-            Notification.requestPermission(function (status) {
-                if (Notification.permission !== status) {
-                    Notification.permission = status;
-                }
-            });
-        }
         // If the user agreed to get notified
         if (Notification && Notification.permission === "granted") {
             var notification = new Notification(un, { icon : image_src, body : m.slice(1) });
@@ -90,6 +84,15 @@
         }
     };
     
+    function myrequest(){
+        if (Notification && Notification.permission !== "granted") {
+            Notification.requestPermission(function (status) {
+                if (Notification.permission !== status) {
+                    Notification.permission = status;
+                }
+            });
+        }
+    }
     // event handlers
 
     $("#fblo").click(function() {
